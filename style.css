@@ -26,17 +26,29 @@ header {
 a {
     color: white;
     text-decoration: none;
-    margin-left: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
     font-weight: bold;
 }
 
 a:hover {
-    text-decoration: underline;
-    text-decoration-color: blue;
+    color: black;
 }
 
 section {
     background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+}
+
+footer {
+    padding-block: 20px;
+    margin: 8px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .headerImage {
@@ -53,7 +65,27 @@ section {
 }
 
 .imageSubText {
-    background-color: grey;
+    background-color: rgb(160, 160, 160);
     padding: 8px;
     font-size: small;
+}
+
+.regularText {
+    background-color: rgb(160, 160, 160);
+}
+
+.mpasRight {
+    width: 30%;
+    padding: 8px;
+    margin-left: 8px;
+}
+
+.footerLinks {
+    font-weight: bold;
+}
+
+#maps {
+    border: 0;
+    height: 350px;
+    width: 70%;
 }
