@@ -1,91 +1,47 @@
 body {
+    margin: 0;
+    border: 0;
+    padding: 0;
     font-family: 'Source Code Pro', monospace;
-    background-color: rgb(160, 160, 160);
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-#ausmalbilder {
-    color: rgb(72, 125, 185);
-}
-
-#aus {
-    color: black;
-}
-
-#leipnitz {
-    color: rgb(194, 63, 63);
+    background-color: beige;
 }
 
 header {
+    margin-bottom: 10;
+    padding-right: 10;
+    padding-right: 10;
+    padding-top: 15;
+    padding-bottom: 15;
+    border: 0;
+    background-color: #1c1d1f;
+    color: white;
+    text-decoration: none;
+}
+
+.aHeader {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-content: inherit;
+}
+
+#c8in4Header {
+    font-weight: bolder;
+    font-size: larger;
+    text-decoration: underline line-through;
 }
 
 a {
-    color: white;
+    color: #ffbe2e;
     text-decoration: none;
-    margin-left: 8px;
-    margin-right: 8px;
-    font-weight: bold;
 }
 
 a:hover {
-    color: black;
+    text-decoration: underline;
 }
 
-section {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-bottom: 8px;
+.rounded-full {
+    border-radius: 9999px;
 }
 
-footer {
-    padding-block: 20px;
-    margin: 8px;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.headerImage {
-    width: 100%;
-    height: 70%;
-    object-fit: cover;
-    display: block;
-}
-
-.imageContainer {
-    background-color: white;
-    padding: 8px;
-    display: block;
-}
-
-.imageSubText {
-    background-color: rgb(160, 160, 160);
-    padding: 8px;
-    font-size: small;
-}
-
-.regularText {
-    background-color: rgb(160, 160, 160);
-}
-
-.mpasRight {
-    width: 30%;
-    padding: 8px;
-    margin-left: 8px;
-}
-
-.footerLinks {
-    font-weight: bold;
-}
-
-#maps {
-    border: 0;
-    height: 350px;
-    width: 70%;
+.sololearn {
+    text-shadow: 5px 2px 4px blue;
 }
