@@ -1,32 +1,16 @@
 body {
-    margin: 0;
-    border: 0;
-    padding: 0;
     font-family: 'Source Code Pro', monospace;
     background-color: beige;
 }
 
 header {
-    margin-bottom: 10;
-    padding-right: 10;
-    padding-right: 10;
-    padding-top: 15;
-    padding-bottom: 15;
-    border: 0;
     background-color: #1c1d1f;
     color: white;
-    text-decoration: none;
 }
 
 .aHeader {
     display: flex;
-    align-content: inherit;
-}
-
-#c8in4Header {
-    font-weight: bolder;
-    font-size: larger;
-    text-decoration: underline line-through;
+    align-content: space-around;
 }
 
 a {
