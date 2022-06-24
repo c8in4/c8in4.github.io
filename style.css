@@ -29,6 +29,15 @@ a:hover {
     text-decoration: underline;
 }
 
+footer {
+    background-color: #1c1d1f;
+    height: 25px;
+}
+
+.footerLinks {
+    background-color: inherit;
+}
+
 .rounded-full {
     border-radius: 9999px;
 }
@@ -67,4 +76,9 @@ a:hover {
 
 .Width70 {
     width: 70%;
+}
+
+#edit {
+    width: 70%;
+    filter: drop-shadow(15px 15px 3px black) grayscale(0%) sepia(0%) blur(0px) brightness(100%) contrast(100%) hue-rotate(0deg) invert(100%) opacity(100%) saturate(100%);
 }
