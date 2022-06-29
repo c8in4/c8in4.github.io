@@ -42,6 +42,10 @@ function stop() {
 
 function reset() {
     if (!running) {
+        hours = 0;
+        minutes = 0;
+        seconds = 0;
+        milliseconds = 0;
         time.innerHTML = "00h : 00min : 00s : 00";
     }
 }
