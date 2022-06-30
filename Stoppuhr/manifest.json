@@ -2,12 +2,13 @@
     "name": "Stoppuhr Progressive Web App",
     "short_name": "Stoppuhr",
     "description": "Stoppuhr mit Start-, Stop- und Reset-Funktion",
-    "icons": [{
-        "src": "stoppuhr_icon.svg",
+    "icons": {
+        "src": "/stoppuhr_icon.svg",
         "type": "image/svg+xml"
-    }],
+    },
     "start_url": "/Stoppuhr/index.html",
     "display": "fullscreen",
+    "orientation": "portrait",
     "theme_color": "#333333",
     "background_color": "#333333"
 }
