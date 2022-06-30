@@ -3,6 +3,12 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 1362.47 1641.898" enable-background="new 0 0 1362.47 1641.898" xml:space="preserve">
+  <style>
+    path { fill: #000000; }
+    @media (prefers-color-scheme: dark) {
+      path { fill: #ffffff; }
+    }
+  </style>
 <g>
 	<path d="M520.296,237.526h39.717v101.468c39.363-7.069,79.86-10.757,121.232-10.757s81.846,3.688,121.209,10.757V237.526h39.717
 		c13.499,0,24.421-10.946,24.421-24.421V45.347c0-13.475-10.922-24.398-24.421-24.398H520.296
