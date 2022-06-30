@@ -5,8 +5,8 @@
     "icons": [{
         "src": "stoppuhr_icon.svg",
         "type": "image/svg+xml"
-    }, ],
-    "start_url": "/index.html",
+    }],
+    "start_url": "/Stoppuhr/index.html",
     "display": "fullscreen",
     "theme_color": "#333333",
     "background_color": "#333333"
