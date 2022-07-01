@@ -26,6 +26,8 @@ button {
 
 footer {
     font-size: x-small;
+    position: absolute;
+    bottom: 3%;
 }
 
 a {
