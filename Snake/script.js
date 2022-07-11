@@ -5,9 +5,7 @@ to dos:
 - touch/swipe input
 - let user change gamespeed
 - let user change cols and rows
-- change "Start/Pause" button
-
-commit
+- timmer for "competetiv" playing
 */
 
 let canvas = document.getElementById("canvas");
@@ -40,12 +38,17 @@ function startGame() {
         gameInterval = setInterval(gameLoop, gameSpeed);
         gameRunning = true;
         gameReset = false;
+        startButton.innerText = "Pause";
         document.addEventListener("keydown", keyDown);
         document.addEventListener('touchstart', handleTouchStart, false);
         document.addEventListener('touchmove', handleTouchMove, false);
+    } else if (!gameRunning && gameLost) {
+        startButton.innerText = "Reset";
+        resetGame();
     } else {
         clearInterval(gameInterval);
         gameRunning = false;
+        startButton.innerText = "Start";
     }
 
 }
@@ -64,6 +67,22 @@ function resetGame() {
         clearInterval(gameInterval);
         count = 0;
         counter.innerText = "0";
+        startButton.innerText = "Start";
+    }
+}
+
+function gameOver() {
+    let firstPart = snake[0];
+    let otherParts = snake.slice(1);
+    let duplicatePart = otherParts.find(part => part.x == firstPart.x && part.y == firstPart.y)
+
+    if (duplicatePart) {
+        clearInterval(gameInterval);
+        gameRunning = false;
+        gameReset = false;
+        gameLost = true;
+        startButton.innerText = "Reset";
+        // alert("Game Over! Try again!");
     }
 }
 
@@ -143,24 +162,8 @@ function moveSnake() {
     }
 }
 
-
 function add(x, y) {
     ctx.fillRect(x * cellWidth, y * cellHeight, cellWidth - 1, cellHeight - 1);
-}
-
-
-function gameOver() {
-    let firstPart = snake[0];
-    let otherParts = snake.slice(1);
-    let duplicatePart = otherParts.find(part => part.x == firstPart.x && part.y == firstPart.y)
-
-    if (duplicatePart) {
-        clearInterval(gameInterval);
-        gameRunning = false;
-        gameReset = false;
-        gameLost = true;
-        // alert("Game Over! Try again!");
-    }
 }
 
 //spawn food

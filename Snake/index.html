@@ -14,11 +14,12 @@
         <h1>Snake</h1>
     </header>
     <main>
-        <canvas id="canvas" width="500px" height="500px"></canvas>
+        <canvas id="canvas" width="350px" height="350px">
+        </canvas>
         <br>
         <div id="buttons">
-            <button type="button" onclick="startGame()">Start/Pause</button>
-            <button type="button" onclick="resetGame()">Reset</button>
+            <button type="button" id="startButton" onclick="startGame()">Start</button>
+            <!-- <button type="button" onclick="resetGame()">Reset</button> -->
         </div>
         <br>
         <div id="scores">
