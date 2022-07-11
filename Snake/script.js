@@ -5,6 +5,9 @@ to dos:
 - touch/swipe input
 - let user change gamespeed
 - let user change cols and rows
+
+bug:
+- after "gameOver" it's possible to start again.
 */
 
 let canvas = document.getElementById("canvas");
