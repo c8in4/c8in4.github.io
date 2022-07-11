@@ -6,6 +6,8 @@ to dos:
 - let user change gamespeed
 - let user change cols and rows
 - change "Start/Pause" button
+
+commit
 */
 
 let canvas = document.getElementById("canvas");
