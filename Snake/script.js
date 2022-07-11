@@ -28,6 +28,7 @@ let cellHeight = canvas.height / rows;
 let gameRunning = false;
 let direction = "right";
 let gameReset = true;
+let gameOver = false;
 
 let count = 0;
 
@@ -35,17 +36,15 @@ placeFood();
 draw();
 
 function startGame() {
-    if (!gameRunning && gameReset) {
+    if (!gameRunning && !gameOver) {
         gameInterval = setInterval(gameLoop, gameSpeed);
         gameRunning = true;
-        gameReset = false;
         document.addEventListener("keydown", keyDown);
         document.addEventListener('touchstart', handleTouchStart, false);
         document.addEventListener('touchmove', handleTouchMove, false);
-    } else {
+    } if (gameRunning) {
         clearInterval(gameInterval);
         gameRunning = false;
-        gameReset = true;
     }
 
 }
@@ -58,6 +57,8 @@ function resetGame() {
         placeFood();
         checkScore();
         gameReset = true;
+        gameRunning = false;
+        gameOver = false;
         direction = "right";
         gameSpeed = 150;
         clearInterval(gameInterval);
@@ -156,7 +157,8 @@ function gameOver() {
     if (duplicatePart) {
         clearInterval(gameInterval);
         gameRunning = false;
-        gameReset = false;
+        gameOver = true;
+        // gameReset = false;
         // alert("Game Over! Try again!");
     }
 }
@@ -223,21 +225,19 @@ function handleTouchMove(evt) {
         if (xDiff > 0 && direction != "right") {
             /* left swipe */
             direction = "left";
-        } else {
-            if (direction != "left") {
+        }
+        if (direction != "left") {
                 /* right swipe */
                 direction = "right";
-            }
         }
     } else {
         if (yDiff > 0 && direction != "down") {
             /* up swipe */
             direction = "up";
-        } else {
-            if (direction != "down") {
+        }
+        if (direction != "down") {
                 /* down swipe */
                 direction = "down";
-            }
         }
     }
     /* reset values */
