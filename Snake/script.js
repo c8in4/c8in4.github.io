@@ -37,8 +37,8 @@ function startGame() {
         gameRunning = true;
         gameReset = false;
         document.addEventListener("keydown", keyDown);
-        canvas.addEventListener('touchstart', handleTouchStart, false);
-        canvas.addEventListener('touchmove', handleTouchMove, false);
+        document.addEventListener('touchstart', handleTouchStart, false);
+        document.addEventListener('touchmove', handleTouchMove, false);
     } else {
         clearInterval(gameInterval);
         gameRunning = false;
