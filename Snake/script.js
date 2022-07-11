@@ -42,6 +42,7 @@ function startGame() {
     } else {
         clearInterval(gameInterval);
         gameRunning = false;
+        gameReset = true;
     }
 
 }
