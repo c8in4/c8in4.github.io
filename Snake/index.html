@@ -10,27 +10,35 @@
 </head>
 
 <body>
-    <h1>Snake</h1>
-    <canvas id="canvas" width="500px" height="500px"></canvas>
-    <br>
-    <div id="buttons">
-        <button type="button" onclick="startGame()">Start/Pause</button>
-        <button type="button" onclick="resetGame()">Reset</button>
-    </div>
-    <br>
-    <div id="scores">
-        Counter:
-        <div id="counter">
-            0
+    <header>
+        <h1>Snake</h1>
+    </header>
+    <main>
+        <canvas id="canvas" width="500px" height="500px"></canvas>
+        <br>
+        <div id="buttons">
+            <button type="button" onclick="startGame()">Start/Pause</button>
+            <button type="button" onclick="resetGame()">Reset</button>
         </div>
         <br>
-        <div>
-            Highscore:
-            <div id="highScore">
+        <div id="scores">
+            Counter:
+            <div id="counter">
                 0
             </div>
+            <br>
+            <div>
+                Highscore:
+                <div id="highScore">
+                    0
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        made by <a href="https://c8in4.github.io/" target="_blank">c8in4</a>
+    </footer>
 
     <script src="script.js"></script>
 </body>

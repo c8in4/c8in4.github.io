@@ -69,7 +69,7 @@ function checkScore() {
 }
 
 function draw() {
-    ctx.fillStyle = "#333333";
+    ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     ctx.fillStyle = "white";
