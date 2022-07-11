@@ -5,6 +5,7 @@ to dos:
 - touch/swipe input
 - let user change gamespeed
 - let user change cols and rows
+- change "Start/Pause" button
 */
 
 let canvas = document.getElementById("canvas");
@@ -25,6 +26,7 @@ let cellHeight = canvas.height / rows;
 let gameRunning = false;
 let direction = "right";
 let gameReset = true;
+let gameLost = false;
 
 let count = 0;
 
@@ -32,13 +34,13 @@ placeFood();
 draw();
 
 function startGame() {
-    if (!gameRunning && gameReset) {
+    if (!gameRunning && !gameLost) {
         gameInterval = setInterval(gameLoop, gameSpeed);
         gameRunning = true;
         gameReset = false;
         document.addEventListener("keydown", keyDown);
-        canvas.addEventListener('touchstart', handleTouchStart, false);
-        canvas.addEventListener('touchmove', handleTouchMove, false);
+        document.addEventListener('touchstart', handleTouchStart, false);
+        document.addEventListener('touchmove', handleTouchMove, false);
     } else {
         clearInterval(gameInterval);
         gameRunning = false;
@@ -54,6 +56,7 @@ function resetGame() {
         placeFood();
         checkScore();
         gameReset = true;
+        gameLost = false;
         direction = "right";
         gameSpeed = 150;
         clearInterval(gameInterval);
@@ -153,6 +156,7 @@ function gameOver() {
         clearInterval(gameInterval);
         gameRunning = false;
         gameReset = false;
+        gameLost = true;
         // alert("Game Over! Try again!");
     }
 }
@@ -215,28 +219,28 @@ function handleTouchMove(evt) {
     let xDiff = xDown - xUp;
     let yDiff = yDown - yUp;
 
-    if (Math.abs(xDiff) > Math.abs(yDiff)) { /*most significant*/
+    if (Math.abs(xDiff) > Math.abs(yDiff)) { //most significant
         if (xDiff > 0 && direction != "right") {
-            /* left swipe */
+            // left swipe
             direction = "left";
-        } else {
-            if (direction != "left") {
-                /* right swipe */
-                direction = "right";
-            }
+        }
+        if (direction != "left") {
+            // right swipe
+            direction = "right";
+
         }
     } else {
         if (yDiff > 0 && direction != "down") {
-            /* up swipe */
+            // up swipe
             direction = "up";
-        } else {
-            if (direction != "down") {
-                /* down swipe */
-                direction = "down";
-            }
         }
+        if (direction != "up") {
+            // down swipe
+            direction = "down";
+        }
+
     }
-    /* reset values */
+    // reset values
     xDown = null;
     yDown = null;
 };
