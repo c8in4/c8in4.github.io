@@ -5,6 +5,11 @@
     font-size: 36px;
 }
 
+html,
+body {
+    overscroll-behavior: contain;
+}
+
 body {
     display: flex;
     align-items: center;
