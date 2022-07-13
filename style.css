@@ -10,7 +10,7 @@ header {
 }
 
 div {
-    border: 2px solid white;
+    /* border: 2px solid white; */
 }
 
 a {
@@ -18,6 +18,7 @@ a {
 }
 
 footer {
+    font-size: x-small;
     display: flex;
     position: absolute;
     bottom: 3%;
