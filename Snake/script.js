@@ -95,13 +95,23 @@ function checkScore() {
 }
 
 function draw() {
+    let snakeHead = snake[0];
+    let snakeBody = snake.slice(1);
+
+    //background
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    ctx.fillStyle = "white";
-    snake.forEach(part => add(part.x, part.y));
-
+    //snake heade
     ctx.fillStyle = "yellow";
+    add(snakeHead.x, snakeHead.y);
+
+    //snake body
+    ctx.fillStyle = "green";
+    snakeBody.forEach(part => add(part.x, part.y));
+
+    //food
+    ctx.fillStyle = "red";
     add(food.x, food.y);
 
     requestAnimationFrame(draw);

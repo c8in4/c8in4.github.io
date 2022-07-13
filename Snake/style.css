@@ -19,6 +19,7 @@ div {
 #canvas {
     width: 95%;
     max-width: 70vh;
+    margin-bottom: 20px;
 }
 
 button {
