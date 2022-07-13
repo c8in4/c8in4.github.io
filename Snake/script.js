@@ -102,7 +102,7 @@ function draw() {
     ctx.fillStyle = "black";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    //snake heade
+    //snake head
     ctx.fillStyle = "yellow";
     add(snakeHead.x, snakeHead.y);
 
