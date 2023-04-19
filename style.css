@@ -15,6 +15,7 @@ div {
 
 a {
     text-decoration: none;
+    display: block;
 }
 
 footer {
