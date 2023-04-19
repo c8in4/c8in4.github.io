@@ -13,6 +13,7 @@ h1 {
 }
 
 th {
+    text-transform: uppercase;
     font-size: medium;
 }
 
