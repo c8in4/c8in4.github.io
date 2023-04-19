@@ -25,7 +25,6 @@ select, input {
     width: 4em;
     text-align: center;
     background: transparent;
-    padding: 0;
     color: inherit;
 }
 
