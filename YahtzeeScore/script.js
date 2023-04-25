@@ -117,3 +117,62 @@ function checkScores() {
     document.getElementById("P2Lower").innerHTML = P2LowerScore
     document.getElementById("P2Total").innerHTML = P2TotalScore
 }
+
+function checkFill(id) {
+    field = document.getElementById(id)
+    if (field.value != "") {
+        field.parentElement.style.backgroundColor = "white"
+        field.parentElement.style.color = "black"
+    }
+    else {
+        field.parentElement.style.backgroundColor = "black"
+        field.parentElement.style.color = "white"
+    }
+}
+
+function checkBox(id) {
+    field = document.getElementById(id)
+    if (field.checked) {
+        field.parentElement.style.backgroundColor = "white"
+        field.parentElement.style.color = "black"
+    }
+    else {
+        field.parentElement.style.backgroundColor = "black"
+        field.parentElement.style.color = "white"
+    }
+}
+
+function evaluateScore() {
+    elements = document.querySelectorAll('.hidden')
+        elements.forEach((element) => {
+        element.classList.remove('hidden')
+        })
+
+    player1Name = document.getElementById("P1Name").value
+    player2Name = document.getElementById("P2Name").value
+    player1Score = Number(document.getElementById("P1Total").textContent)
+    player2Score = Number(document.getElementById("P2Total").textContent)
+
+    if (player1Score > player2Score) {
+        winner = player1Name
+        looser = player2Name
+        winScore = player1Score
+        looseScore = player2Score
+
+        phrase = winner + " won with " + winScore + " points.\n" + looser +  " has " + looseScore + " points."
+        alert(phrase)
+    }
+    if (player2Score > player1Score) {
+        winner = player2Name
+        looser = player1Name
+        winScore = player2Score
+        looseScore = player1Score
+
+        phrase = winner + " won with " + winScore + " points.\n" + looser +  " has " + looseScore + " points."
+        alert(phrase)
+    }
+    if (player1Score == player2Score) {
+        draw = "Draw " + player1Name + " and " + player2Name + " have " + player1Score + " poitns."
+        alert(draw)
+    }
+}

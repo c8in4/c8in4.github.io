@@ -44,10 +44,14 @@ tr {
 }
 
 .selectable:hover {
-    background-color: white;
     color: black;
+    border-color: white;
 }
 
 .description {
     font-size: small;
+}
+
+.hidden {
+    visibility: hidden;
 }
