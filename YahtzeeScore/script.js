@@ -172,7 +172,14 @@ function evaluateScore() {
         alert(phrase)
     }
     if (player1Score == player2Score) {
-        draw = "Draw " + player1Name + " and " + player2Name + " have " + player1Score + " poitns."
+        draw = "Draw " + player1Name + " and " + player2Name + " have " + player1Score + " points."
         alert(draw)
     }
+}
+
+function reset() {
+    if (confirm('Are you sure you want to reset the game?')) {
+        window.location.reload()
+      } else {
+      }
 }
