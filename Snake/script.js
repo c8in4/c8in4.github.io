@@ -16,8 +16,8 @@ let snake = [
 let food;
 
 //game settings
-let cols = 16;
-let rows = 16;
+let cols = 12;
+let rows = 12;
 let gameSpeed = 150;
 let gameInterval;
 
