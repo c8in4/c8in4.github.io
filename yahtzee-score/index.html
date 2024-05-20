@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <title>Yahtzee Scoreboard</title>
+</head>
+<body>
+    <table>
+        <caption>
+            <h1>Yahtzee Scoreboard</h1>
+        </caption>
+        <tr>
+            <th style="width: 25%;">upper section</th>
+            <th style="width: 25%;">how to score</th>
+            <th colspan="3" style="width: 25%;"><input type="text"  id="P1Name" placeholder="Player 1"></th>
+            <th colspan="3" style="width: 25%;"><input type="text"  id="P2Name" placeholder="Player 2"></th>
+        </tr>
+        <tr>
+            <th>aces</th>
+            <td class="description">Count and add<br>only Aces</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Aces" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Aces" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>twos</th>
+            <td class="description">Count and add<br>only Twos</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Twos" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Twos" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="2">2</option>
+                    <option value="4">4</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>threes</th>
+            <td class="description">Count and add<br>only Threes</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Threes" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Threes" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>fours</th>
+            <td class="description">Count and add<br>only Fours</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Fours" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Fours" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="4">4</option>
+                    <option value="8">8</option>
+                    <option value="12">12</option>
+                    <option value="16">16</option>
+                    <option value="20">20</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>fives</th>
+            <td class="description">Count and add<br>only Fives</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Fives" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Fives" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>sixes</th>
+            <td class="description">Count and add<br>only Sixes</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Sixes" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Sixes" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="6">6</option>
+                    <option value="12">12</option>
+                    <option value="18">18</option>
+                    <option value="24">24</option>
+                    <option value="30">30</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>total</th>
+            <td>-></td>
+            <td colspan="3" id="P1Numbers"></td>
+            <td colspan="3" id="P2Numbers"></td>
+        </tr>
+        <tr>
+            <th>bonus</th>
+            <td class="description">SCORE 35</td>
+            <td colspan="3" id="P1Bonus"></td>
+            <td colspan="3" id="P2Bonus"></td>
+        </tr>
+        <tr class="total hidden">
+            <th>total</th>
+            <td>-></td>
+            <td colspan="3" id="P1Upper"></td>
+            <td colspan="3" id="P2Upper"></td>
+        </tr>
+        <tr>
+            <th>lower section</th>
+        </tr>
+        <tr>
+            <th>3 of a kind</th>
+            <td class="description">Add total<br>of all dice</td>
+            <td colspan="3" class="selectable">
+                <input type="number" id="P13X" onchange="checkScores(); checkFill(this.id)">
+            </td>
+            <td colspan="3" class="selectable">
+                <input type="number" id="P23X" onchange="checkScores(); checkFill(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <th>4 of a kind</th>
+            <td class="description">Add total<br>of all dice</td>
+            <td colspan="3" class="selectable">
+                <input type="number" id="P14X" onchange="checkScores(); checkFill(this.id)">
+            </td>
+            <td colspan="3" class="selectable">
+                <input type="number" id="P24X" onchange="checkScores(); checkFill(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <th>full house</th>
+            <td class="description">SCORE 25</td>
+            <td colspan="3" class="selectable">
+                <select id="P1FH" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="25">25</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2FH" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="25">25</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>sm straight</th>
+            <td class="description">SCORE 30</td>
+            <td colspan="3" class="selectable">
+                <select id="P1SM" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="30">30</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2SM" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="30">30</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>lg straight</th>
+            <td class="description">SCORE 40</td>
+            <td colspan="3" class="selectable">
+                <select id="P1LG" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="40">40</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2LG" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="40">40</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>yahtzee</th>
+            <td class="description">SCORE 50</td>
+            <td colspan="3" class="selectable">
+                <select id="P1Yahtzee" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="50">50</option>
+                </select>
+            </td>
+            <td colspan="3" class="selectable">
+                <select id="P2Yahtzee" onchange="checkScores(); checkFill(this.id)">
+                    <option value=""></option>
+                    <option value="0">0</option>
+                    <option value="50">50</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th>chance</th>
+            <td class="description">Score total<br>of all dice</td>
+            <td colspan="3">
+                <input type="number" id="P1Chance" onchange="checkScores(); checkFill(this.id)">
+            </td>
+            <td colspan="3">
+                <input type="number" id="P2Chance" onchange="checkScores(); checkFill(this.id)">
+            </td>
+        </tr>
+        <tr>
+            <th rowspan="2">yahtzee<br>bonus</th>
+            <td class="description">X FOR<br>EACH BONUS</td>
+            <td class="selectable"><input type="checkbox" id="P1Y1" onchange="checkScores(); checkBox(this.id)"></td>
+            <td class="selectable"><input type="checkbox" id="P1Y2" onchange="checkScores(); checkBox(this.id)"></td>
+            <td class="selectable"><input type="checkbox" id="P1Y3" onchange="checkScores(); checkBox(this.id)"></td>
+            <td class="selectable"><input type="checkbox" id="P2Y1" onchange="checkScores(); checkBox(this.id)"></td>
+            <td class="selectable"><input type="checkbox" id="P2Y2" onchange="checkScores(); checkBox(this.id)"></td>
+            <td class="selectable"><input type="checkbox" id="P2Y3" onchange="checkScores(); checkBox(this.id)"></td>
+        </tr>
+        <tr>
+            <td class="description">SCORE 100<br>PER X</td>
+            <td colspan="3" id="P1YBonus"></td>
+            <td colspan="3" id="P2YBonus"></td>
+        </tr>
+        <tr class="total hidden">
+            <th>total</th>
+            <td>-></td>
+            <td colspan="3" id="P1Lower"></td>
+            <td colspan="3" id="P2Lower"></td>
+        </tr>
+        <tr class="total hidden">
+            <th>grand total</th>
+            <td>-></td>
+            <td colspan="3" id="P1Total"></td>
+            <td colspan="3" id="P2Total"></td>
+        </tr>
+    </table>
+    <button type="button" onclick="evaluateScore()">
+        Submit
+    </button>
+    <button type="button" onClick="reset()">
+        Reset
+    </button>
+</body>
+</html>

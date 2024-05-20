@@ -1,0 +1,9 @@
+{
+    "name": "Yahtzee Scoring App",
+    "short_name": "Yahtzee",
+    "description": "Score your Yahtzee Game",
+    "icons": [{}],
+    "start_url": "/YahtzeeScore/index.html",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}

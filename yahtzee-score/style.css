@@ -1,0 +1,57 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin: 0%;
+    padding: 0%;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: large;
+}
+
+th {
+    text-transform: uppercase;
+    font-size: medium;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+select, input {
+    width: 4em;
+    text-align: center;
+    background: transparent;
+    color: inherit;
+}
+
+
+tr, th, td {
+    border: 1px solid;
+}
+
+tr {
+    height: 2em;
+}
+
+.total {
+    background-color: white;
+    color: black;
+}
+
+.selectable:hover {
+    color: black;
+    border-color: white;
+}
+
+.description {
+    font-size: small;
+}
+
+.hidden {
+    visibility: hidden;
+}
