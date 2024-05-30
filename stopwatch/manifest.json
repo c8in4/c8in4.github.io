@@ -1,0 +1,14 @@
+{
+    "name": "Stopwatch Progressive Web App",
+    "short_name": "Stopwatch",
+    "description": "Stopwatch mit Start-, Stop- und Reset-Funktion",
+    "icons": [{
+        "src": "/stopwatch_icon.svg",
+        "type": "image/svg+xml"
+    }],
+    "start_url": "/stopwatch/index.html",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "theme_color": "#333333",
+    "background_color": "#333333"
+}
