@@ -8,7 +8,7 @@
             "sizes": "512x512"
         }
     ],
-    "start_url": "https://c8in4.github.io/stopwatch/index.html",
+    "start_url": "stopwatch/index.html",
     "display": "fullscreen",
     "orientation": "portrait",
     "theme_color": "#333333",
