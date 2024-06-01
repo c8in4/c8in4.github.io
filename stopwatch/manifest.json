@@ -1,9 +1,9 @@
 {
     "short_name": "Stopwatch",
-    "description": "Stopwatch with start, stop and reset",
+    "description": "Stopwatch with start, stop and reset.",
     "icons": [
         {
-            "src": "/stopwatch_icon.svg",
+            "src": "stopwatch-icon.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
         }
