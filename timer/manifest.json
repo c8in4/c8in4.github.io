@@ -1,14 +1,14 @@
 {
-    "short_name": "Stopwatch",
-    "description": "Stopwatch with start, stop and reset",
+    "short_name": "5 min timer",
+    "description": "Timer counts down from 5 min to 0.",
     "icons": [
         {
-            "src": "/stopwatch_icon.svg",
+            "src": "timer-icon.svg",
             "type": "image/svg+xml",
             "sizes": "512x512"
         }
     ],
-    "start_url": "stopwatch/index.html",
+    "start_url": "timer/index.html",
     "display": "fullscreen",
     "orientation": "portrait",
     "theme_color": "#333333",
