@@ -1,5 +1,6 @@
 # My 'The Odin Project' Projects
 
+[Slide-Show](https://c8in4.github.io/slide-show)  
 [Todo-List](https://c8in4.github.io/TOP-todo-list/)  
 [Restaurant Page](https://c8in4.github.io/TOP-restaurant-page/)  
 [Library](https://c8in4.github.io/TOP-library/)  
