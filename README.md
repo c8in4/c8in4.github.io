@@ -16,8 +16,9 @@
 
 ## Other Projects
 
-- [Timer](https://c8in4.github.io/timer/index.html)
-- [Stopwatch](https://c8in4.github.io/stopwatch/index.html)
-- [Snake](https://c8in4.github.io/snake/)
-- [Yahtzee Dice](https://c8in4.github.io/yahtzee/)
+- [Launch Pad](https://c8in4.github.io/launch-pad/)
 - [Yahtzee Scoreboard](https://c8in4.github.io/yahtzee-score/index.html)
+- [Yahtzee Dice](https://c8in4.github.io/yahtzee/)
+- [Snake](https://c8in4.github.io/snake/)
+- [Stopwatch](https://c8in4.github.io/stopwatch/index.html)
+- [Timer](https://c8in4.github.io/timer/index.html)
