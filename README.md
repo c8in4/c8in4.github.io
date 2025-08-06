@@ -16,6 +16,7 @@
 
 ## Other Projects
 
+- [Wingload Calculator](https://c8in4.github.io/wingload-calculator/)
 - [Launch Pad](https://c8in4.github.io/launch-pad/)
 - [Yahtzee Scoreboard](https://c8in4.github.io/yahtzee-score/index.html)
 - [Yahtzee Dice](https://c8in4.github.io/yahtzee/)
